@@ -3,5 +3,5 @@
 <h2><%= item.title %> </h2>
 <p><%= item.subtitle %> </p>
 <p><%= item.body %> </p>
-<%= image_tag item.thum_image %>
+<%= image_tag item.thum_image unless item.thum_image.nil? %>
 <%end%>	
