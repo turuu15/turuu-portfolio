@@ -5,5 +5,5 @@ class Blog < ApplicationRecord
 
     validates_presence_of :title, :body
 
-    belongs_top :topic
+    belongs_to :topic
 end

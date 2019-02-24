@@ -6,6 +6,10 @@ class PortfoliosController < ApplicationController
 		@portfolio_items = Portfolio.all
 	end
 
+	def angular
+		@angular_pi = Portfolio.angular
+	end
+
 	def show
 		
 	end
