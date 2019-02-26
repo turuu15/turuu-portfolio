@@ -1,10 +1,20 @@
+
+3.times do |topic|
+
+	Topic.create!(
+		title: "My awesome topic #{topic}"
+	)
+end
+puts "3 topic been created"
+
 10.times do |blog|
 
 	Blog.create!(
 		title: "My great title #{blog}",
 		body: "Lorem ipsum dolor sit amet,
 		 consectetuer adipiscing elit. Aenean
-		  commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenat"
+		 commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenat",
+		topic_id: Topic.last.id	
 	)
 end
 puts "10 blog has been created"
@@ -17,10 +27,26 @@ puts "10 blog has been created"
 end
 puts "5 skills have been created"
 
-9.times do |i|
+7.times do |i|
 	Portfolio.create!(
 		title: "Portfolio title #{i}",
-		subtitle: "My greate service",
+		subtitle: "Ruby on rails",
+		body: "Lorem ipsum dolor sit amet,
+		 consectetuer adipiscing elit. Aenean
+		 commodo ligula eget dolor. Aenean
+		 massa. Cum sociis natoque penatibus
+		 et magnis dis parturient montes,
+		 nascetur ridiculus mus. Donec quam
+		 felis, ultricies nec, pellentesque eu",
+      	main_image:"http://placehold.it/600x300",
+      	thum_image: "http://placehold.it/350x200"
+	)
+end
+
+2.times do |i|
+	Portfolio.create!(
+		title: "Portfolio title #{i}",
+		subtitle: "Angular",
 		body: "Lorem ipsum dolor sit amet,
 		 consectetuer adipiscing elit. Aenean
 		 commodo ligula eget dolor. Aenean
@@ -33,3 +59,10 @@ puts "5 skills have been created"
 	)
 end
 puts "9 portfolio have been created"
+
+3.times do |i|
+	Portfolio.last.technologies.create!(
+		name: "Technology #{i}"
+	)
+end
+puts "3 technologies have been created"
