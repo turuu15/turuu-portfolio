@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'home', to: "pages#home"
 
   resources :blogs
+  root "blogs#index"
 
 
   get 'angular-items', to:"portfolios#angular"
