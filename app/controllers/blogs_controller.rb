@@ -7,6 +7,8 @@ class BlogsController < ApplicationController
     @blogs = Blog.all
   end
 
+  #this is just test comment
+  #this is again second comment for second commit
   # GET /blogs/1
   # GET /blogs/1.json
   def show
